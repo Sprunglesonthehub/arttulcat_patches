@@ -1,0 +1,9 @@
+--- a/browser/app/profile/firefox.js
++++ b/browser/app/profile/firefox.js
+@@ -1082,3 +1082,6 @@
+ pref("browser.search.order.US", "Canine Tools");
+ 
+ pref("browser.startup.homepage_override.mstone", "86.0");
++
++// The homepage URL used when the browser starts or the home button is clicked.
++pref("browser.startup.homepage", "https://arttulos.org/search.html");
