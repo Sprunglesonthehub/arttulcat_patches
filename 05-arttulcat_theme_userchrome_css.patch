@@ -149,7 +149,7 @@
 +    transition: background-color var(--arttulos-transition-speed), fill var(--arttulos-transition-speed);
 +}
 +.tab-close-button:hover {
-+    background-color: var(--arttulos-accent-purple-dark) !important; /* Darker purple on hover */
++    background-color: var(--arttulos-accent-purple-dark) !important;
 +    fill: var(--arttulos-text-primary) !important;
 +}
 +

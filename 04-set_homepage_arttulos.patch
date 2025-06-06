@@ -1,9 +1,9 @@
 --- a/browser/app/profile/firefox.js
 +++ b/browser/app/profile/firefox.js
-@@ -1098,3 +1098,6 @@
- pref("browser.privatebrowsing.enable_for_virtual_tophistory", true);
+@@ -1101,3 +1101,6 @@
  pref("browser.privatebrowsing.enable_for_virtual_bookmarks", false);
  pref("browser.urlbar.search.sources", "heuristic,history,bookmarks,engines,remote,formhistory,keywords");
+ pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 +
 +// The homepage URL used when the browser starts or the home button is clicked.
 +pref("browser.startup.homepage", "https://arttulos.org/search.html");
