@@ -1,6 +1,6 @@
 --- a/browser/app/profile/firefox.js
 +++ b/browser/app/profile/firefox.js
-@@ -1071,8 +1071,8 @@
+@@ -1071,11 +1071,11 @@
  // The search engine to be used in the URL bar, search bar, and home page.
  // "defaultenginename" is the default for all regions.
  pref("browser.search.defaultenginename", "Google");
