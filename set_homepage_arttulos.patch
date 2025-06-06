@@ -1,0 +1,23 @@
+--- a/browser/app/profile/firefox.js
++++ b/browser/app/profile/firefox.js
+@@ -1071,11 +1071,14 @@
+ // The search engine to be used in the URL bar, search bar, and home page.
+ // "defaultenginename" is the default for all regions.
+ pref("browser.search.defaultenginename", "Google");
+-// If "defaultenginename" is overridden by a regional preference (e.g.,
+-// is in a region-specific override.ini or search.json.mozlz4), then this
+-// preference defines which default engine is used for regions that don't
+-// have a specified default engine.
+-pref("browser.search.defaultenginename.US", "Google");
+-pref("browser.search.order.US", "Google");
++// Replaced with Canine Tools. If "defaultenginename" is overridden by a regional
++// preference (e.g., is in a region-specific override.ini or search.json.mozlz4),
++// then this preference defines which default engine is used for regions that
++// don't have a specified default engine.
++pref("browser.search.defaultenginename.US", "Canine Tools");
++pref("browser.search.order.US", "Canine Tools");
+ 
+ pref("browser.startup.homepage_override.mstone", "86.0");
++
++// The homepage URL used when the browser starts or the home button is clicked.
++pref("browser.startup.homepage", "https://arttulos.org/search.html");

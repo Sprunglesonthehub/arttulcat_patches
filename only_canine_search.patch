@@ -1,0 +1,63 @@
+--- a/browser/app/profile/firefox.js
++++ b/browser/app/profile/firefox.js
+@@ -1071,8 +1071,8 @@
+ // The search engine to be used in the URL bar, search bar, and home page.
+ // "defaultenginename" is the default for all regions.
+ pref("browser.search.defaultenginename", "Google");
+-// If "defaultenginename" is overridden by a regional preference (e.g.,
+-// is in a region-specific override.ini or search.json.mozlz4), then this
+-// preference defines which default engine is used for regions that don't
+-// have a specified default engine.
+-pref("browser.search.defaultenginename.US", "Google");
+-pref("browser.search.order.US", "Google");
++// Replaced with Canine Tools. If "defaultenginename" is overridden by a regional
++// preference (e.g., is in a region-specific override.ini or search.json.mozlz4),
++// then this preference defines which default engine is used for regions that
++// don't have a specified default engine.
++pref("browser.search.defaultenginename.US", "Canine Tools");
++pref("browser.search.order.US", "Canine Tools");
+ 
+ pref("browser.startup.homepage_override.mstone", "86.0");
+--- a/browser/components/search/resources/search.json
++++ b/browser/components/search/resources/search.json
+@@ -3,29 +3,17 @@
+ {
+   "_locales": {
+     "en-US": {
+       "engines": [
+         {
+-          "name": "Wikipedia (en)",
+-          "queryUrl": "https://en.wikipedia.org/wiki/Special:Search?search={searchTerms}",
+-          "iconUrl": "resource://search-extensions/wikipedia@search.mozilla.org/icon.png"
+-        },
+-        {
+-          "name": "Amazon.com",
+-          "queryUrl": "https://www.amazon.com/s?field-keywords={searchTerms}&tag=firefox-20",
+-          "iconUrl": "resource://search-extensions/amazon@search.mozilla.org/icon.png"
+-        },
+-        {
+-          "name": "DuckDuckGo",
+-          "queryUrl": "https://duckduckgo.com/?q={searchTerms}",
+-          "iconUrl": "resource://search-extensions/ddg@search.mozilla.org/icon.png"
+-        },
+-        {
+-          "name": "Google",
+-          "queryUrl": "https://www.google.com/search?q={searchTerms}",
+-          "iconUrl": "resource://search-extensions/google@search.mozilla.org/icon.png"
+-        },
+-        {
+-          "name": "Bing",
+-          "queryUrl": "https://www.bing.com/search?q={searchTerms}",
+-          "iconUrl": "resource://search-extensions/bing@search.mozilla.org/icon.png"
++          "name": "Canine Tools",
++          "queryUrl": "https://search.canine.tools/search?q={searchTerms}",
++          "iconUrl": "https://search.canine.tools/favicon.ico",
++          "hidden": false,
++          "orderHint": 0,
++          "alias": "@canine",
++          "description": "The private search engine",
++          "tags": ["canine", "private", "search"],
++          "isUser-created": false
+         }
+       ]
+     }
